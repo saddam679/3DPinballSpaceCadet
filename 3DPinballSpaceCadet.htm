@@ -40,8 +40,13 @@
 				{
 				if (event.key === "c")
 					{
-					const slash = new KeyboardEvent("keydown", { key: "/", code: "Slash", which: 191, keyCode: 191, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
-					document.getElementById("canvas").dispatchEvent(slash);
+					const keySlash = new KeyboardEvent("keydown", { key: "/", code: "Slash", which: 191, keyCode: 191, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
+					document.getElementById("canvas").dispatchEvent(keySlash);
+					}
+				else if (event.key === "r")
+					{
+					const keyF2 = new KeyboardEvent("keydown", { key: "F2", code: "F2", which: 113, keyCode: 113, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
+					document.getElementById("canvas").dispatchEvent(keyF2);
 					}
 				});
 
@@ -49,8 +54,13 @@
 				{
 				if (event.key === "c")
 					{
-					const slash = new KeyboardEvent("keyup", { key: "/", code: "Slash", which: 191, keyCode: 191, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
-					document.getElementById("canvas").dispatchEvent(slash);
+					const keySlash = new KeyboardEvent("keyup", { key: "/", code: "Slash", which: 191, keyCode: 191, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
+					document.getElementById("canvas").dispatchEvent(keySlash);
+					}
+				else if (event.key === "r")
+					{
+					const keyF2 = new KeyboardEvent("keyup", { key: "F2", code: "F2", which: 113, keyCode: 113, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
+					document.getElementById("canvas").dispatchEvent(keyF2);
 					}
 				else if (event.key === "t")
 					{
