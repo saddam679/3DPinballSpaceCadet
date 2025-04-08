@@ -10,7 +10,7 @@ https://lrusso.github.io/3DPinballSpaceCadet/3DPinballSpaceCadet.htm
 
 - The music is disabled.
 - The game menu is hidden.
-- The game automatically resizes to the window.
+- The game automatically resizes to fit the window.
 - Supporting the ```C``` key for using the right flipper.
 - Allowing the user to enable or disable the sound effects by pressing the ```T``` key.
 
