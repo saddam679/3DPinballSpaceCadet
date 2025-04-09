@@ -49,7 +49,7 @@
 		<script>
 			var Module={preRun:[],postRun:[],print:function(){}(),printErr:function(e){},canvas:function(){var e=document.getElementById("canvas");return e.addEventListener("webglcontextlost",(function(e){}),!1),e}(),setStatus:function(e){},totalDependencies:0,monitorRunDependencies:function(e){}};
 
-			var audioMuted = true;
+			var GAME_SOUND_ENABLED = true;
 
 			document.addEventListener("keydown", function(event)
 				{
@@ -77,12 +77,16 @@
 					const keyF2 = new KeyboardEvent("keyup", { key: "F2", code: "F2", which: 113, keyCode: 113, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
 					document.getElementById("canvas").dispatchEvent(keyF2);
 					}
-				else if (event.key === "t" && document.getElementsByClassName("gui_container")[0].style.display === "none")
+				else if (event.key === "t")
 					{
-					audioMuted = !audioMuted;
+					if (!Module.SDL2) {
+						return;
+					}
+
+					GAME_SOUND_ENABLED = !GAME_SOUND_ENABLED;
 					try
 						{
-						if (!audioMuted)
+						if (!GAME_SOUND_ENABLED)
 							{
 							Module.SDL2.audioContext.suspend();
 							}
