@@ -77,7 +77,7 @@
 					const keyF2 = new KeyboardEvent("keyup", { key: "F2", code: "F2", which: 113, keyCode: 113, shiftKey: false, ctrlKey: false, altKey: false, metaKey: false, bubbles: true, cancelable: true});
 					document.getElementById("canvas").dispatchEvent(keyF2);
 					}
-				else if (event.key === "t")
+				else if (event.key === "t" && document.getElementsByClassName("gui_container")[0].style.display === "none")
 					{
 					audioMuted = !audioMuted;
 					try
